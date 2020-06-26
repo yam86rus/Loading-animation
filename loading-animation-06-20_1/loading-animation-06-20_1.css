@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg,rgb(86, 108, 231, 0.2), rgba(86, 108, 231, 0.932));
+}
+
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.loader__item{
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    border-radius: 25px;
+    animation: animate 2s linear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+   
+}
+
+@keyframes animate {
+    0%{
+        transform:  perspective(200px) rotateX(0deg) rotateY(0deg);
+    }
+    50%{
+        transform:  perspective(200px) rotateX(-180deg) rotateY(0deg);
+    }
+    100%{
+        transform:  perspective(200px) rotateX(-180deg) rotateY(-180deg);
+    }
+}
